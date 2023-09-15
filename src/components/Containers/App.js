@@ -1,13 +1,11 @@
 import React from "react";
-import Jira from "./Jira";
 import { ToastContainer } from "react-toastify";
+import MainLayout from "./../Layout/MainLayout";
 
 export default function App() {
   return (
-    <div>
+    <MainLayout>
       <ToastContainer />
-
-      <Jira />
-    </div>
+    </MainLayout>
   );
 }

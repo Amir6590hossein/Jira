@@ -1,0 +1,12 @@
+.Header-Parent{
+    margin: 0 ,auto;
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #433E52;
+    height: 20vh;
+
+}

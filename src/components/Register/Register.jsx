@@ -24,7 +24,7 @@ export default function Register() {
         ></input>
         <input
           type="password"
-          placeholder="password"
+          placeholder="confirmPassword"
           name="confirm-password"
           aria-describedby="confirm-password"
         ></input>
