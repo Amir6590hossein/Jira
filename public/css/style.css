@@ -1,12 +1,58 @@
-.Header-Parent{
-    margin: 0 ,auto;
+:root{
+    --first-color:#433E52;
+    --main-color:#212121;
+    --form-color:#2C73FF
+}
+
+
+
+/* Header */
+.Header-parent{
+    background-color:var(--first-color);
+    height: 20vh;
+
+
+
 }
 .Header{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #433E52;
-    height: 20vh;
+    margin: .5rem 1rem;
 
+    max-width: 40%;
+
+}
+
+.Header-Child{
+    color:aliceblue ;
+    text-decoration: none;
+}
+.Header-Child:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: aliceblue;
+
+}
+/* end of Header */
+.form-parent{
+    height: 60vh;
+    background-color: var(--main-color);
+
+    
+}
+
+.image{
+    max-width: 300px;
+}
+
+.sign-in{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+}
+.form-group{
+    color: var(--form-color);
 }
