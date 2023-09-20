@@ -4,8 +4,8 @@ import logo from "../../Image/Group 80.png";
 export default function Login() {
   return (
     <div className="form-parent">
-      <div className="sign-in">
-        <Form className="my-form col-4">
+      <div className="my-form">
+        <Form className="mb-3 col-4 form-group">
           <Form.Group className="mb-3 form-group" controlId="Email">
             <Form.Label>Email:</Form.Label>
             <Form.Control type="email" placeholder="Enter Your Password" />

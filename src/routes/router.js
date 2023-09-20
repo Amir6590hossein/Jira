@@ -3,7 +3,8 @@ import Login from "./../components/Login/Login";
 import Register from "../components/Register/Register";
 import Home from "../components/Common/Home";
 import MainLayout from "../components/Layout/MainLayout";
-import App from "../components/Containers/App";
+import UserLayout from "../components/Layout/UserLayout";
+import NewProject from "./../components/User/NewProject";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +30,14 @@ export const router = createBrowserRouter([
       <MainLayout>
         <Home />
       </MainLayout>
+    ),
+  },
+  {
+    path: "/NewProject",
+    element: (
+      <UserLayout>
+        <NewProject />
+      </UserLayout>
     ),
   },
 ]);
