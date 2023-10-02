@@ -9,13 +9,20 @@
 
 
 /* Header */
-.Header-parent{
+ .Header-parent{
     background-color:var(--first-color);
-    height: 20vh;
+    height: 10vh;
+
 
 
 
 }
+
+.Train{
+   color: var(--NavLink); 
+}
+/*  */
+/*
 .Header{
     display: flex;
     flex-direction: row;
@@ -37,6 +44,10 @@
     background-color: aliceblue;
 
 }
+
+.Train{
+    color: white;
+} */
 /* end of Header */
 .form-parent{
     height: 60vh;
@@ -75,12 +86,26 @@ height: 100vh;
 .formLable{
     color: var(--form-color);
 }
-.Link{
-    color: var(--NavLink) ;
+
+.navLink{
+    color: white;
     
 }
-.Link:hover{
-    background-color: var(--NavLink);
+
+
+.navLink:hover{
     color: var(--menu-color);
+    font-size: 2em;
+    background-color: var(--NavLink);
     
 }
+/* Home*/
+.home{
+    background-color: var(--main-color);
+}
+.main{
+    background-color: var(--main-color);
+}
+
+
+

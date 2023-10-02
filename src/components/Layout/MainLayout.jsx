@@ -5,9 +5,11 @@ import Footer from "../Common/Footer";
 export default function MainLayout({ children }) {
   return (
     <Fragment>
-      <Header />
-      {children}
-      <Footer />
+      <div className="main">
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </Fragment>
   );
 }

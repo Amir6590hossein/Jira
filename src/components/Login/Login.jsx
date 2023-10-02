@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Stack } from "react-bootstrap";
 import logo from "../../Image/Group 80.png";
 export default function Login() {
   return (
@@ -15,9 +15,11 @@ export default function Login() {
             <Form.Label>Passsword:</Form.Label>
             <Form.Control type="password" placeholder="Enter Your Password" />
           </Form.Group>
-          <Button type="submit" className="col-4">
-            Sign in
-          </Button>
+          <Stack>
+            <Button type="submit" className="col-4">
+              Sign in
+            </Button>
+          </Stack>
         </Form>
 
         <div>

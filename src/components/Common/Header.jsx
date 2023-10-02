@@ -1,37 +1,32 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
+import image from "./../../Image/Train.png";
+import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 export default function Header() {
-  useEffect(() => {
-    console.log("hrader");
-  }, []);
   return (
-    <div className=" Header-parent">
-      <div className="Header">
-        <h1 className="Header-Child Train">
-          <i class="fa-solid fa-train"></i>
-          Train
-        </h1>
-        <h5>
-          <Link to="/" className="Header-Child">
-            Home
-          </Link>
-        </h5>
-        <h5>
-          <a href={"https://www.youtube.com/"} className="Header-Child">
-            Demo
-          </a>
-        </h5>
-        <h5>
-          <Link to={"/#contact"} className="Header-Child">
-            Contact
-          </Link>
-        </h5>
-      </div>
-
-      <div>
-        <button className="btn btn-danger">Sign in</button>
-      </div>
-    </div>
+    <Row className="Header-parent">
+      <Col lg={2}></Col>
+      <Col lg={5}>
+        <Navbar>
+          <Navbar.Brand className="Train">
+            <img src={image} alt="" />
+            Train2.0
+          </Navbar.Brand>
+          <Container>
+            <Nav>
+              <Nav.Link as={Link} to={"/"} className="navLink">
+                Home
+              </Nav.Link>
+              <Nav.Link href="https://www.youtube.com/" className="navLink">
+                Demo
+              </Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+      </Col>
+      <Col lg={3} style={{ marginTop: "20px" }}>
+        <Button variant="danger">sign in</Button>
+      </Col>
+    </Row>
   );
 }

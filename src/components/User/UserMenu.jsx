@@ -13,24 +13,27 @@ export default function UserMenu() {
               <Stack gap={3}>
                 <Nav.Item>
                   {" "}
-                  <Nav.Link as={Link} to={"/Projects"} className="navLinks">
+                  <Nav.Link as={Link} to={"/Projects"} className="navLink">
                     Projects
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link as={Link} className="navLinks">
+                  <Nav.Link as={Link} className="navLink">
                     <i class="fa-regular fa-square-plus"></i>
                     New Project
                   </Nav.Link>
                 </Nav.Item>
-
-                <Nav.Link as={Link} className="navLinks">
-                  <i class="fa-regular fa-user"></i>
-                  Profile
-                </Nav.Link>
-                <Nav.Link as={Link} className="navLinks">
-                  <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
-                </Nav.Link>
+                <Nav.Item>
+                  <Nav.Link as={Link} className="navLink">
+                    <i class="fa-regular fa-user"></i>
+                    Profile
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} className="navLink">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
+                  </Nav.Link>
+                </Nav.Item>
               </Stack>
             </Nav>
           </Stack>
