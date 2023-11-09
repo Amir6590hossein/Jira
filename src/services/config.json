@@ -1,5 +1,6 @@
 {
     "fakeApi":"",
-    "Api":""
+    "Api":"",
+    "register":"http://localhost:5000/v1/user/auth/register"
     
 }

@@ -34,6 +34,7 @@ export default function Home() {
           </h6>
         </Col>
         <Col lg={2}></Col>
+        
       </Row>
     </div>
   );
