@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Form, Stack } from "react-bootstrap";
 import logo from "../../Image/Group 80.png";
+
 export default function Login() {
   return (
     <div className="form-parent">
@@ -8,11 +9,11 @@ export default function Login() {
         <Form className="mb-3 col-4 form-group">
           <Form.Group className="mb-3 form-group" controlId="Email">
             <Form.Label>Email:</Form.Label>
-            <Form.Control type="email" placeholder="Enter Your Password" />
+            <Form.Control type="email" placeholder="Enter Your Email" />
           </Form.Group>
 
           <Form.Group className="mb-3 form-group">
-            <Form.Label>Passsword:</Form.Label>
+            <Form.Label>Password:</Form.Label>
             <Form.Control type="password" placeholder="Enter Your Password" />
           </Form.Group>
           <Stack>

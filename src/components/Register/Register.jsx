@@ -33,7 +33,7 @@ export default function Register() {
             <Form.Label>Email:</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Enter Your Email:"
+              placeholder="Enter Your Email"
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -42,56 +42,65 @@ export default function Register() {
             />
             {validator.current.message("email", email, "required|email")}
           </Form.Group>
-          <Form.Group className="mb-3 form-group" controlId="Email">
-            <Form.Label>Phone_Number:</Form.Label>
+
+          <Form.Group className="mb-3 form-group" controlId="phoneNumber">
+            <Form.Label>Phone Number:</Form.Label>
             <Form.Control
-              type="number"
-              placeholder="Enter Your phonNumber:"
+              type="phoneNumber"
+              placeholder="Enter Your Phone Number"
               value={phoneNumber}
               onChange={(e) => {
                 setPhoneNumber(e.target.value);
                 validator.current.showMessageFor("phoneNumber");
               }}
             />
-            {validator.current.message("email", email, "required|number")}
+            {validator.current.message(
+              "phoneNumber",
+              phoneNumber,
+              "required|phoneNumber"
+            )}
           </Form.Group>
-          <Form.Group className="mb-3 form-group" controlId="Email">
-            <Form.Label>firstName:</Form.Label>
+
+          <Form.Group className="mb-3 form-group" controlId="firstName">
+            <Form.Label>First Name:</Form.Label>
             <Form.Control
               type=""
               text
-              placeholder="Enter Your firstname:"
+              placeholder="Enter Your First Name:"
               value={firstName}
               onChange={(e) => {
                 setFirstName(e.target.value);
-                validator.current.showMessageFor("firstname");
+                validator.current.showMessageFor("firstName");
               }}
             />
             {validator.current.message(
-              "firstname",
+              "firstName",
               firstName,
               "required|min:3"
             )}
           </Form.Group>
-          <Form.Group className="mb-3 form-group" controlId="Email">
-            <Form.Label>lastname:</Form.Label>
+
+          <Form.Group className="mb-3 form-group" controlId="lastName">
+            <Form.Label>Last Name:</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter Your LastName:"
+              placeholder="Enter Your Last Name:"
               value={lastName}
               onChange={(e) => {
                 setLastName(e.target.value);
-                validator.current.showMessageFor("lastname");
+                validator.current.showMessageFor("lastName");
               }}
             />
-            {validator.current.message("lastname", lastName, "required|min:3")}
+            {validator.current.message("lastName", lastName, "required|min:3")}
           </Form.Group>
+
           <Form.Group className="mb-3 form-group">
-            <Form.Label>Passsword:</Form.Label>
+            <Form.Label>Password:</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter Your Password"
               value={password}
+              autoComplete="new-password"
               onChange={(e) => {
                 setPassword(e.target.value);
                 validator.current.showMessageFor("password");
@@ -105,11 +114,12 @@ export default function Register() {
           </Form.Group>
 
           <Form.Group className="mb-3 form-group">
-            <Form.Label>Confirm Passsword:</Form.Label>
+            <Form.Label>Confirm Password:</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter Your Confirm Password"
               value={confirmPassword}
+              autoComplete="new-password"
               onChange={(e) => {
                 setConfirmPassword(e.target.value);
                 validator.current.showMessageFor("confirmPassword");

@@ -26,6 +26,12 @@ export default function UserContext({ children }) {
             return val.length > 7;
           },
         },
+        phoneNumber: {
+          message: "Must be a valid phone number format",
+          rule: (val) => {
+            return /^0\d[1,2,3]\d{8}$/.test(val);
+          },
+        },
       },
       messages: {
         in: "Must match a string in options.",
@@ -60,15 +66,17 @@ export default function UserContext({ children }) {
       if (validator.current.allValid()) {
         const a = await registerAxios(user);
         // console.log(a);
-        if (a.status == 201) {
+        if (a.status === 201) {
           successMessage("User registered successfully");
           navigate("/login");
         } else {
         }
       }
     } catch (error) {
-      console.log(error.data);
-      errorMessage(error.response.data.message);
+      console.log(error?.data);
+      errorMessage(
+        error?.response?.data?.message || "Unexpected Error Occurred"
+      );
     }
   };
 

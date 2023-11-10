@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Col, Row, Stack } from "react-bootstrap";
 import Image from "./../../Image/Group 80.png";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   return (
     <div className="">
       <Row className="mt-2">
@@ -14,7 +16,13 @@ export default function Home() {
             the readable content of a page when looking at its layout.
           </p>
           <Stack>
-            <Button>Sign up</Button>
+            <Button
+              onClick={(e) => {
+                navigate("/register");
+              }}
+            >
+              Sign up
+            </Button>
           </Stack>
         </Col>
         <Col lg={2}></Col>
@@ -34,7 +42,6 @@ export default function Home() {
           </h6>
         </Col>
         <Col lg={2}></Col>
-        
       </Row>
     </div>
   );

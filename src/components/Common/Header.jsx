@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "./../../Image/Train.png";
-import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
+import SignInButton from "./SignInButton";
 export default function Header() {
   return (
     <Row className="Header-parent">
@@ -25,7 +26,7 @@ export default function Header() {
         </Navbar>
       </Col>
       <Col lg={3} style={{ marginTop: "20px" }}>
-        <Button variant="danger">sign in</Button>
+        <SignInButton />
       </Col>
     </Row>
   );
